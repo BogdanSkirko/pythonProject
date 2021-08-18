@@ -62,5 +62,10 @@ while True:
         for i in notebook:
             if i['price'] == price:
                 print(i)
-    # if choise == '7':
+    if choise == '7':
+        avg_sum = 0
+        for i in notebook:
+            avg_sum += int(i['price']/ len(i))
+
+        print('Середня вартість покупок становить: ', avg_sum)
 
