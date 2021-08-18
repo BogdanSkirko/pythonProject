@@ -19,13 +19,15 @@ while True:
     print('2)Список всіх записів')
     print('3)Загальна сума всіх покупок')
     print('4)Найдорожча покупка')
-    print('4)Пошук по назві покупки')
+    print('5)Пошук по назві покупки')
+    print('6)Пошук по ціні покупки')
+    print('7)Середня ціна всіх покупок')
     print('9)Вихід')
 
     choise = input(print('Зробіть свій вибір:'))
     if choise == '1':
         name = input('Введіть назву покупи : ')
-        price = input('Введіть суму покупки : ')
+        price = int(input('Введіть суму покупки : '))
         notebook.append({'name': name, 'price': price})
         pass
     if choise == '2':
@@ -35,13 +37,30 @@ while True:
     if choise == '3':
         sum = 0
         for i in notebook:
-            sum += i['price']
+            sum += int(i['price'])
 
         print('Сума покупок : ', sum)
-        pass
+
     if choise == '4':
+        max_price = 0
+        for i in notebook:
+            if max_price < i['price']:
+                max_price = i['price']
+        for i in notebook:
+            if i['price'] == max_price:
+                print(i)
+        pass
+
+    if choise == '5':
         name = input('Введіть назву покупки - ')
         for i in notebook:
             if i['name'] == name:
                 print(i)
-                break
+        pass
+    if choise == '6':
+        price = input('Введіть ціну покупки - ')
+        for i in notebook:
+            if i['price'] == price:
+                print(i)
+    # if choise == '7':
+
