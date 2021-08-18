@@ -76,3 +76,6 @@ while True:
             only_price.append(i['price'])
             only_price.sort()
         print(only_price)
+
+    if choise == '9':
+        break
