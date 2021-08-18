@@ -22,6 +22,7 @@ while True:
     print('5)Пошук по назві покупки')
     print('6)Пошук по ціні покупки')
     print('7)Середня ціна всіх покупок')
+    print('8)Посортувати покупки по ціні зростання')
     print('9)Вихід')
 
     choise = input(print('Зробіть свій вибір:'))
@@ -65,7 +66,13 @@ while True:
     if choise == '7':
         avg_sum = 0
         for i in notebook:
-            avg_sum += int(i['price']/ len(i))
+            avg_sum += int(i['price'] / len(i))
 
         print('Середня вартість покупок становить: ', avg_sum)
 
+    if choise == '8':
+        only_price = []
+        for i in notebook:
+            only_price.append(i['price'])
+            only_price.sort()
+        print(only_price)
