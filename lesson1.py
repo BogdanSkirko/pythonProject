@@ -7,17 +7,14 @@ list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
 
 
 #  - удалить все дубликаты в листе
-
 # print(set(list))
 
 
-#  - заменить каждое четвертое значение на "Х"
-# for i in range(len(list)):
-#     if list[i] % 4 == 0:
-#         list[i] = 'x'
-#
-#
+# - заменить каждое четвертое значение на "Х"
+# for i in range(3,len(list),4):
+#     list[i] = 'x'
 # print(list)
+
 # 2)вывести на экран пустой квадрат из "*" сторона которого указана в переменой:
 
 # width = 10
@@ -34,30 +31,33 @@ list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
 # # for i in range(1, table+1):
 # #     print(*range(i,i*table+1 ,i),sep='\t')
 
+
+
 # 4) переделать первое задание под меню с помощью цикла
-while True:
-    print('1) Знайти мін. число')
-    print('2) удалить все дубликаты в листе')
-    print('3) заменить каждое четвертое значение на "Х"')
-    print('4) вывести элемент листа, значение которого ближе всего к среднему арифметическому всеx эл. этого листа')
-    print('5) exit')
-    choise = input('make your choise ')
-    if choise == '1':
-        print(list)
-        list.sort()
-        print(list[0])
-        pass
-    if choise == '2':
-        for i in range(len(list)):
-            if list[i] % 4 == 0:
-                list[i] = 'x'
-    if choise == '3':
-        for i in range(len(list)):
-            if list[i] % 4 == 0:
-                list[i] = 'x'
-                pass
-
-
+# while True:
+#     print('1) Знайти мін. число')
+#     print('2) удалить все дубликаты в листе')
+#     print('3) заменить каждое четвертое значение на "Х"')
+#     print('4) exit')
+#     choise = input('make your choise ')
+#     if choise == '1':
+#         print(list)
+#         list.sort()
+#         print(list[0])
+#         pass
+#
+#     if choise == '2':
+#         print(set(list))
+#
+#     if choise == '3':
+#         for i in range(3, len(list), 4):
+#             list[i] = 'x'
+#
+#         print(list)
+#     if choise == '4':
+#         print('This is end')
+#         break
+#
 
 
 # '''***  - вывести элемент листа, значение которого ближе всего к среднему арифметическому всех элементов этого же листа
