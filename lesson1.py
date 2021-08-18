@@ -1,68 +1,47 @@
-# 1)Дан лист:
-#  - найти min число в листе
-list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
+# реализовать записную книжку покупок:
+# - каждая запись должна содержать название покупки и ее цену
+# -сделать менюшку для работы с записной книжкой:
+#     '1) Создать запись'
+#     '2) Список все записей'
+#     '3) Общая сумма всех покупок'
+#     '4) Самая дорогая покупка'
+#     '5) Поиск по названию покупки'
+#     '9) Выход'
+# - можете придумать свои пункты
 
-# list.sort()
-# print(list[0])
+notebook = [
+    {'name': 'egg', 'price': 3},
+    {'name': 'meat', 'price': 100},
+]
 
+while True:
+    print('1)Створити список')
+    print('2)Список всіх записів')
+    print('3)Загальна сума всіх покупок')
+    print('4)Найдорожча покупка')
+    print('4)Пошук по назві покупки')
+    print('9)Вихід')
 
-#  - удалить все дубликаты в листе
-# print(set(list))
+    choise = input(print('Зробіть свій вибір:'))
+    if choise == '1':
+        name = input('Введіть назву покупи : ')
+        price = input('Введіть суму покупки : ')
+        notebook.append({'name': name, 'price': price})
+        pass
+    if choise == '2':
+        for i in notebook:
+            print(i)
+        pass
+    if choise == '3':
+        sum = 0
+        for i in notebook:
+            sum += i['price']
 
-
-# - заменить каждое четвертое значение на "Х"
-# for i in range(3,len(list),4):
-#     list[i] = 'x'
-# print(list)
-
-# 2)вывести на экран пустой квадрат из "*" сторона которого указана в переменой:
-
-# width = 10
-# height = 10
-#
-# print('*' * width)
-# for i in range(height - 2):
-#     print('*' + ' ' * (width-2) + '*')
-# print('*' * height)
-
-
-# 3) вывести табличку умножения с помощью цикла while
-# table = 9
-# # for i in range(1, table+1):
-# #     print(*range(i,i*table+1 ,i),sep='\t')
-
-
-
-# 4) переделать первое задание под меню с помощью цикла
-# while True:
-#     print('1) Знайти мін. число')
-#     print('2) удалить все дубликаты в листе')
-#     print('3) заменить каждое четвертое значение на "Х"')
-#     print('4) exit')
-#     choise = input('make your choise ')
-#     if choise == '1':
-#         print(list)
-#         list.sort()
-#         print(list[0])
-#         pass
-#
-#     if choise == '2':
-#         print(set(list))
-#
-#     if choise == '3':
-#         for i in range(3, len(list), 4):
-#             list[i] = 'x'
-#
-#         print(list)
-#     if choise == '4':
-#         print('This is end')
-#         break
-#
-
-
-# '''***  - вывести элемент листа, значение которого ближе всего к среднему арифметическому всех элементов этого же листа
-# пример:
-# [1, 2, 3, 4, 5, 6, 7, 8, 9] => 5
-# [-1, -2, 3, 4, 555] => 4
-# [5, 5, 5, 5] => 5
-# [-10, 5, 5] => 5
+        print('Сума покупок : ', sum)
+        pass
+    if choise == '4':
+        name = input('Введіть назву покупки - ')
+        for i in notebook:
+            if i['name'] == name:
+                print(i)
+                break
