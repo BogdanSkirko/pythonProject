@@ -103,12 +103,44 @@ def min_num(list):
     print(min(list))
 
 
-min_num([1, 3, 4, 5, 6, 44444])
+min_num([1, -122, 3, 4, 5, 6, 44444])
+
+
 # - створити функцію яка приймає ліст чисел та складає значення елементів ліста та повертає його.
+
+def list_num(lists):
+    suma = []
+    for i in lists:
+        suma.append(i)
+    print(sum(suma))
+
+
+list_num([1, 3, 4, 5, 6, 33333])
+
+
 # - створити функцію яка приймає ліст чисел та повертає середнє арифметичне його значень.
-#
+def list_avg(lists):
+    avg_list = 0
+    for i in lists:
+        avg_list = (avg_list + i) / len(lists)
+    print(avg_list)
+    return avg_list
+
+
+list_avg([10, 10, 10, 10, 10, 1000, 31231])
+
+
 # decorators
 # - є функція:
-# def pr():
-#     return 'Hello_boss_!!!'
 #  написати декоратор до цієї функції, який замінює нижні підчеркування на пробіли і повертає це значення
+
+def pr():
+    return 'Hello_boss_!!!'
+
+
+def decor(a):
+    change = a().replace('_', ' ')
+    return change
+
+
+print(decor(pr))
