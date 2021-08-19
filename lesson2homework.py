@@ -134,13 +134,16 @@ list_avg([10, 10, 10, 10, 10, 1000, 31231])
 # - є функція:
 #  написати декоратор до цієї функції, який замінює нижні підчеркування на пробіли і повертає це значення
 
-def pr():
-    return 'Hello_boss_!!!'
+
 
 
 def decor(a):
     change = a().replace('_', ' ')
     return change
 
+@decor
+def pr():
+    return 'Hello_boss_!!!'
 
-print(decor(pr))
+
+print(pr)
