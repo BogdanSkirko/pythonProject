@@ -44,7 +44,7 @@ print(list(filter(lambda x: x % 15 != 0, list_numbers)))
 # # Пример:
 # # summ(7) -> 7+77+777=861
 def fun(n: int) -> int:
-    sum = n + n * 10 + n * 100
+    sum = n + n * 11 + n * 111
     return sum
 
 
